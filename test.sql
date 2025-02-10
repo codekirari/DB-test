@@ -4,7 +4,7 @@ GO
 
 -- Eliminar la tabla si ya existe
 DROP TABLE IF EXISTS Usuarios;
-GO
+
 
 -- Eliminar los procedimientos almacenados si ya existen
 DROP PROCEDURE IF EXISTS sp_RegistrarUsuario;
@@ -19,7 +19,7 @@ CREATE TABLE Usuarios (
     Nombre NVARCHAR(100),                    
     Apellido NVARCHAR(100),                 
     NombreUsuario NVARCHAR(50) UNIQUE,        
-    Contraseña NVARCHAR(255)              
+    Password NVARCHAR(255)              
 );
 GO
 
@@ -28,10 +28,10 @@ CREATE PROCEDURE sp_RegistrarUsuario
     @Nombre NVARCHAR(100),
     @Apellido NVARCHAR(100),
     @NombreUsuario NVARCHAR(50),
-    @Contraseña NVARCHAR(255)
+    @Password NVARCHAR(255)
 AS
 BEGIN
-    INSERT INTO Usuarios (Nombre, Apellido, NombreUsuario, Contraseña)
+    INSERT INTO Usuarios (Nombre, Apellido, NombreUsuario, Password)
     VALUES (@Nombre, @Apellido, @NombreUsuario, @Contraseña);
 END;
 GO
