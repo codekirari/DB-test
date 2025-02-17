@@ -1,0 +1,16 @@
+select * from USUARIO
+insert into USUARIO(Nombre,Apellido,Correo,Clave) values ('Test Nombre','Test Apellido', 'test@correo.com','ecd71870d1963316a97e3ac3408c9835ad8cf0f3c1bc703527c30265534f75ae
+')
+
+select * from CATEGORIA
+insert into CATEGORIA(Descripcion) values ('Tecnologia'),('Muebles'),('Dormitorio'), ('Deportes')
+
+select * from MARCA 
+insert into MARCA(Descripcion) values ('LG'),('SONY'),('KALLEY'),('SAMSUNG')
+
+select * from DEPARTAMENTO
+insert into DEPARTAMENTO(IdDepartamento, Descripcion) values 
+('01','Antioquia'),
+('02','Atlantico'),
+('03','Bogota'),
+('04','Bolivar')
